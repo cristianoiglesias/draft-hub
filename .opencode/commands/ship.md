@@ -1,84 +1,57 @@
 ---
-description: Review changes and draft commit/PR content
+description: Run workflow (security → review → commit → pr)
 agent: general
 ---
 
-You must execute the full workflow in sequence.
+You must execute the workflow following AGENTS.md rules.
 
 ---
 
-STEP 0 - SECURITY CHECK
+## STEP 0 — SECURITY CHECK
 
-If the changes involve:
+If changes involve:
 - scripts
 - shell commands
 - file system operations
 - infrastructure changes
 
-Then:
-- run security-auditor first
-- if risk is detected:
-  - STOP immediately
-  - report issues
-  - do not continue
+Run security-auditor first.
 
----
-
-STEP 1 - REVIEW
-
-Run a full review of current changes.
-
-If any of the following are found:
-- bugs
-- unnecessary complexity
-- unclear logic
-- inconsistencies
-
-Then:
-- STOP immediately
-- explain the issues
+If risk is detected:
+- STOP
+- report issues
 - do not continue
 
 ---
 
-STEP 2 - COMMIT
+## STEP 1 — REVIEW
 
-If review is acceptable:
+Run review on current changes.
 
-Generate a Conventional Commit message.
-
-Rules:
-- concise
-- accurate
-- no invented changes
+If review fails:
+- STOP
+- report issues
+- do not continue
 
 ---
 
-STEP 3 - PR
+## STEP 2 — COMMIT
 
-Generate:
-
-- PR title
-- description including:
-  - what was done
-  - why
-  - how to validate
-  - impact
+Generate Conventional Commit message.
 
 ---
 
-CONSTRAINTS:
+## STEP 3 — PR
 
-- do not skip steps
-- do not assume changes
-- stop if review fails
+Generate PR content including:
+- what was done
+- why
+- how to validate
+- impact
 
 ---
 
-OUTPUT:
+## RULE
 
-Return:
-
-- review summary
-- commit message
-- PR content
+All behavior must follow AGENTS.md.
+Do not redefine governance here.
