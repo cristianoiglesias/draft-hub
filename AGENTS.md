@@ -238,3 +238,22 @@ It must not include:
 
 - application logic
 - business code
+
+---
+
+## Language
+
+All responses must be in Brazilian Portuguese (pt-BR).
+
+Rules:
+- Use informal, professional, and direct tone
+- Avoid unnecessary verbosity
+- Avoid English unless explicitly required (e.g., code, commands, commit messages)
+
+Priority:
+
+Language rules apply to:
+- commands output
+- agent responses
+- explanations
+- PR descriptions
